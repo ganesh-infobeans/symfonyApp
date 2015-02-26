@@ -15,4 +15,12 @@ class WelcomeController extends Controller
          */
         return $this->render('AcmeDemoBundle:Welcome:index.html.twig');
     }
+    public function dashboard()
+    {
+        /*
+         *
+         *
+         */
+        return $this->render('AcmeDemoBundle:Welcome:dashboard.html.twig');
+    }
 }
