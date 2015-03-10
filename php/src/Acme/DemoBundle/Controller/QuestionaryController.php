@@ -15,6 +15,10 @@ class QuestionaryController extends Controller
          */
         $form = $this->createFormBuilder()
         ->add('q1', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os')))
+        ->add('q2', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os')))
+        ->add('q3', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os')))
+        ->add('q4', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os')))
+        ->add('q5', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os')))
         ->add('save', 'submit', array('label' => 'Submit'))
         ->getForm();
 
