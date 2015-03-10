@@ -4,6 +4,7 @@ namespace Acme\DemoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 class QuestionaryController extends Controller
 {
     public function indexAction(Request $request)
@@ -16,6 +17,7 @@ class QuestionaryController extends Controller
         $form = $this->createFormBuilder()
         ->add('q1', 'choice', array('choices' => array('1'=>'YAML','2'=> 'PHP','3'=>'XML','4'=> 'All of above'),'label'=>'In Symfony, the routing configuration can be written in .....'))
         ->add('q2', 'choice', array('choices' => array('1'=>'Bundle','2'=> 'Kernel','3'=>'Controller','4'=>'model'),'label' => ' Which of the following returns Symfony2 Response object back to the user?  '))
+        ->add('q3', 'choice', array('choices' => array('1'=>'Response object','2'=> 'Request Object','3'=>'PHP Object ','4'=>'none'),'label' => ' The goal of each controller in Symfony is to return a.....  '))
         ->add('save', 'submit', array('label' => 'Submit'))
         ->getForm();
 
@@ -35,6 +37,10 @@ class QuestionaryController extends Controller
                                     break;
                                 case 'q2' :
                                     if($val == 2)
+                                    $rightAnswer++;
+                                    break;
+                                case 'q3' :
+                                    if($val == 1)
                                     $rightAnswer++;
                                     break;
                             }
