@@ -4,7 +4,7 @@ namespace Acme\DemoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class QuestionaryController extends Controller
+class QuesionaryController extends Controller
 {
     public function indexAction()
     {
