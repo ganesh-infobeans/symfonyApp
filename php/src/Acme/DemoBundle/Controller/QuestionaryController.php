@@ -19,6 +19,14 @@ class QuestionaryController extends Controller
         ->add('save', 'submit', array('label' => 'Submit'))
         ->getForm();
 
+        $form->handleRequest($request);
+
+                if ($form->isValid()) {
+                    // perform some action, such as saving the task to the database
+
+                    return $this->redirect($this->generateUrl('task_success'));
+                }
+
         return $this->render('AcmeDemoBundle:Questionary:index.html.twig',array(
             'form' => $form->createView(),
         ));
