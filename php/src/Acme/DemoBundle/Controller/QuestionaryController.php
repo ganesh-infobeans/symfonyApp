@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class QuestionaryController extends Controller
 {
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         /*
          * The action's view can be rendered using render() method
