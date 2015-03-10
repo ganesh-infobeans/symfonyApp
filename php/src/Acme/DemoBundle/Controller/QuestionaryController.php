@@ -23,7 +23,7 @@ class QuestionaryController extends Controller
 
                 if ($form->isValid()) {
                     // perform some action, such as saving the task to the database
-                    $form->bindRequest($request);
+                    //$form->bindRequest($request);
                     $data = $form->getData();
                     print_r($data);die;
                     //return $this->redirect($this->generateUrl('task_success'));
