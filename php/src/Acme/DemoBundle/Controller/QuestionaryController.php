@@ -14,9 +14,8 @@ class QuestionaryController extends Controller
          *
          */
         $form = $this->createFormBuilder()
-        ->add('task', 'text')
-        ->add('dueDate', 'date')
-        ->add('save', 'submit', array('label' => 'Create Task'))
+        ->add('What is symfony?', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os')))
+        ->add('save', 'submit', array('label' => 'Submit'))
         ->getForm();
 
         return $this->render('AcmeDemoBundle:Questionary:index.html.twig',array(
