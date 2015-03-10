@@ -25,7 +25,23 @@ class QuestionaryController extends Controller
                     // perform some action, such as saving the task to the database
                     //$form->bindRequest($request);
                     $data = $form->getData();
-                    print_r($data);die;
+                    $rightAnswer = 0;
+                    if(!empty($data)) {
+                        foreach($data as $key=>$val) {
+                            switch($key) {
+                                case $q1 :
+                                    if($val == 4)
+                                    $rightAnswer++;
+                                    break;
+                                case $q2 :
+                                    if($val == 2)
+                                    $rightAnswer++;
+                                    break;
+                            }
+                        }
+                    }
+//                    $q1=$request->request->get('q1','default value if bar does not exist');
+                    print_r($rightAnswer);die;
                     //return $this->redirect($this->generateUrl('task_success'));
                 }
 
