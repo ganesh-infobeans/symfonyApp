@@ -3,7 +3,7 @@
 namespace Acme\DemoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Symfony\Component\HttpFoundation\Request;
 class QuestionaryController extends Controller
 {
     public function indexAction(Request $request)
