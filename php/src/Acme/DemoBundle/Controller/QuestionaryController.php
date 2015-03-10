@@ -41,8 +41,7 @@ class QuestionaryController extends Controller
                         }
                     }
 //                    $q1=$request->request->get('q1','default value if bar does not exist');
-                    print_r($rightAnswer);die;
-                    $response = new Response('Your Score is '.$rightAnswer);
+                    $response = new Response('<h1>Your Score is '.$rightAnswer.'</h1>');
                     $response->send();
                     //return $this->redirect($this->generateUrl('task_success'));
                 }
