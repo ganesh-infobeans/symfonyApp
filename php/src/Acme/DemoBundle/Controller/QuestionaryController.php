@@ -29,11 +29,11 @@ class QuestionaryController extends Controller
                     if(!empty($data)) {
                         foreach($data as $key=>$val) {
                             switch($key) {
-                                case $q1 :
+                                case 'q1' :
                                     if($val == 4)
                                     $rightAnswer++;
                                     break;
-                                case $q2 :
+                                case 'q2' :
                                     if($val == 2)
                                     $rightAnswer++;
                                     break;
@@ -42,6 +42,8 @@ class QuestionaryController extends Controller
                     }
 //                    $q1=$request->request->get('q1','default value if bar does not exist');
                     print_r($rightAnswer);die;
+                    $response = new Response('Your Score is '.$rightAnswer);
+                    $response->send();
                     //return $this->redirect($this->generateUrl('task_success'));
                 }
 
