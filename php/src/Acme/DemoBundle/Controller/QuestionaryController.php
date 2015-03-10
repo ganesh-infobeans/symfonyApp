@@ -13,7 +13,15 @@ class QuestionaryController extends Controller
          * or @Template annotation as demonstrated in DemoController.
          *
          */
-        return $this->render('AcmeDemoBundle:Questionary:index.html.twig');
+        $form = $this->createFormBuilder()
+        ->add('task', 'text')
+        ->add('dueDate', 'date')
+        ->add('save', 'submit', array('label' => 'Create Task'))
+        ->getForm();
+
+        return $this->render('AcmeDemoBundle:Questionary:index.html.twig',array(
+            'form' => $form->createView(),
+        ));
     }
    
 }
