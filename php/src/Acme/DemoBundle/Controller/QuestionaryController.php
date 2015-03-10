@@ -17,7 +17,7 @@ class QuestionaryController extends Controller
         $form = $this->createFormBuilder()
         ->add('q1', 'choice', array('choices' => array('1'=>'YAML','2'=> 'PHP','3'=>'XML','4'=> 'All of above'),'label'=>'Q1.  In Symfony, the routing configuration can be written in .....'))
         ->add('q2', 'choice', array('choices' => array('1'=>'Bundle','2'=> 'Kernel','3'=>'Controller','4'=>'model'),'label' => 'Q2.   Which of the following returns Symfony2 Response object back to the user?  '))
-        ->add('q3', 'choice', array('choices' => array('1'=>'Response object','2'=> 'Request Object','3'=>'PHP Object ','4'=>'none'),'Q3.  label' => ' The goal of each controller in Symfony is to return a.....  '))
+        ->add('q3', 'choice', array('choices' => array('1'=>'Response object','2'=> 'Request Object','3'=>'PHP Object ','4'=>'none'),'label' => 'Q3.  The goal of each controller in Symfony is to return a.....  '))
         ->add('q4', 'choice', array('choices' => array('1'=>'Bundle','2'=> 'Router','3'=>'COntroller ','4'=>'Model'),'label' => 'Q4.  Which of the following in Symfony is a directory that houses everything related to a specific feature, including PHP classes, configuration, and
 even stylesheets and Javascript files?.'))
         ->add('save', 'submit', array('label' => 'Submit'))
