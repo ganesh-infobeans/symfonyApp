@@ -8,5 +8,8 @@
     {% set version = constant('Symfony\\Component\\HttpKernel\\Kernel::MAJOR_VERSION') ~ '.' ~ constant('Symfony\\Component\\HttpKernel\\Kernel::MINOR_VERSION')%}
 
     <h1 class="title">Welcome To Quesionary!</h1>
+    {{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
    
 {% endblock %}
