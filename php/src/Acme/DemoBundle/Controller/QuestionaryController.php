@@ -14,11 +14,8 @@ class QuestionaryController extends Controller
          *
          */
         $form = $this->createFormBuilder()
-        ->add('q1', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os'),'label'=>'What is Symfony?'))
-        ->add('q2', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os')))
-        ->add('q3', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os')))
-        ->add('q4', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os')))
-        ->add('q5', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os')))
+        ->add('q1', 'choice', array('choices' => array('1'=>'YAML','2'=> 'PHP','3'=>'XML','4'=> 'All of above'),'label'=>'In Symfony, the routing configuration can be written in .....'))
+        ->add('q2', 'choice', array('choices' => array('1'=>'Bundle','2'=> 'Kernel','3'=>'Controller','4'=>'model'),'label' => ' Which of the following returns Symfony2 Response object back to the user?  '))
         ->add('save', 'submit', array('label' => 'Submit'))
         ->getForm();
 
