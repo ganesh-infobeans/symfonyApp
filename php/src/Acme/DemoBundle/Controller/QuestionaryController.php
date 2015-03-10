@@ -14,7 +14,7 @@ class QuestionaryController extends Controller
          *
          */
         $form = $this->createFormBuilder()
-        ->add('What is symfony?', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os')))
+        ->add('q1', 'choice', array('choices' => array('1'=>'Framework','2'=> 'os')))
         ->add('save', 'submit', array('label' => 'Submit'))
         ->getForm();
 
