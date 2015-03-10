@@ -11,6 +11,6 @@ _demo:
     type:     annotation
     prefix:   /demo
     
-_quesionary:
-    pattern:  /quesionary
-    defaults: { _controller: AcmeDemoBundle:Quesionary:index }
+_questionary:
+    pattern:  /questionary
+    defaults: { _controller: AcmeDemoBundle:Questionary:index }
